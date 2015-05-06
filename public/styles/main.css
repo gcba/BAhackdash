@@ -1,0 +1,913 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700);
+
+body {
+
+  margin: 0; font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 13px;
+  line-height: 18px; color: #333333; background: #eeedee; padding-top:160px;
+background: #eeedee url('../images/header-2x.png') no-repeat center center fixed;
+-webkit-background-size: 100%;
+-moz-background-size: 100%;
+-o-background-size: 100%;
+background-size: 100%;}
+
+
+
+.navbar-fixed-top > header {
+ background-color: red;
+}
+
+@font-face {
+  font-family: 'bahackaton';
+  src:url('font-face/bahackaton.eot');
+  src:url('font-face/bahackaton.eot?#iefix') format('embedded-opentype'),
+    url('font-face/bahackaton.woff') format('woff'),
+    url('font-face/bahackaton.ttf') format('truetype'),
+    url('font-face/bahackaton.svg#bahackaton') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+  font-family: 'bahackaton';
+  content: attr(data-icon);
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons on hover */
+[data-icon-hover]:hover:before {
+  font-family: 'bahackaton';
+  content: attr(data-icon-hover);
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+.icon-twitter, .icon-heart-broken, .icon-heart, .icon-edit, .icon-logout, .icon-add, .icon-search, .icon-status, .icon-collaborate, .icon-follow, .icon-noun_project_16183, .icon-noun_project_9202, .icon-trashcan, .icon-clock, .icon-join {
+  font-family: 'bahackaton';
+  speak: none;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1.5;
+  padding-bottom: 8px;
+  margin-top: 1px;
+  -webkit-font-smoothing: antialiased;
+}
+.icon-twitter:before {
+  content: "\21";
+  font-size: 16px;
+}
+.icon-heart-broken:before {
+  content: "\22";
+}
+.icon-heart:before {
+  content: "\23";
+}
+.icon-edit:before {
+  content: "\24";
+  font-size: 14px;
+  line-height: 7px;
+}
+.icon-logout:before {
+  content: "\25";
+  font-size: 20px;
+  font-weight: bold;
+}
+}
+.icon-add:before {
+  content: "\26";
+}
+.icon-search:before {
+  content: "\27";
+}
+.icon-status:before {
+  content: "\28";
+}
+.icon-collaborate:before {
+  content: "\29";
+}
+.icon-follow:before {
+  content: "\2a";
+}
+.icon-noun_project_16183:before {
+  content: "\2b";
+}
+.icon-noun_project_9202:before {
+  content: "\2c";
+}
+.icon-trashcan:before {
+  content: "\2e";
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.icon-clock:before {
+  content: "\2f";
+}
+
+.icon-join:before {
+  content: "\30";
+  font-size: 24px;
+}
+
+
+/*@font-face {
+font-family: 'Entypo';
+src: url('font-face/entypo-webfont.eot');
+src: url('font-face/entypo-webfont.eot?#iefix') format('embedded-opentype'),
+url('font-face/entypo-webfont.woff') format('woff'),
+url('font-face/entypo-webfont.ttf') format('truetype'),
+url('font-face/entypo-webfont.svg#EntypoRegular') format('svg');
+font-weight: normal;
+font-style: normal;
+}
+*/
+header { 
+  padding: 18px 0 17px 0; 
+  background: #212529;
+  margin:0 0 80px 0;
+height: 50px;
+position: fixed;width:100%; z-index: 10;top:0;
+}
+
+header h1 {
+  margin: 0;
+}
+
+header h1 a {
+  color: white;
+  width: 113px; height: 126px;
+      background: url('../images/logohack.png') 0 0 no-repeat;
+      text-indent: -9999px;
+  display: block; margin:0 auto;
+}
+
+header h1 a:hover {
+  color: gray;
+  text-decoration: none;
+}
+
+header p.lead {
+          margin-bottom: 0;
+           font-size: 14px;
+         font-weight: regular;
+            color: #999;
+            margin-top:-5px;
+}
+
+
+header .createProject {
+            display: inline-block;          
+  }
+
+
+
+.kindafixed-top {
+  top: 90px;
+}
+
+.isotope {
+  -webkit-transition-property: height, width;
+     -moz-transition-property: height, width;
+      -ms-transition-property: height, width;
+       -o-transition-property: height, width;
+          transition-property: height, width;
+          overflow: visible!important;
+}
+
+.isotope .project {
+  cursor: pointer;
+  -webkit-transition-property: -webkit-transform, opacity;
+     -moz-transition-property:    -moz-transform, opacity;
+      -ms-transition-property:     -ms-transform, opacity;
+       -o-transition-property:         top, left, opacity;
+          transition-property:         transform, opacity;
+}
+
+.well {
+  min-height:                                           20px;
+  margin-bottom:                                        30px;
+  background-color:                       #ffffff !important;
+  border:                                  1px solid #e4e4e4;
+  border:                                                  0;
+  border-radius:                                 0!important;
+  -webkit-box-shadow:    inset 0 0px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow:       inset 0 0px 0px rgba(0, 0, 0, 0.2);
+  box-shadow:            inset 0 0px 0px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow:          0 1px 2px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow:             0 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow:                  0 1px 2px rgba(0, 0, 0, 0.2);
+  padding:                                                 0;
+  position: relative;
+    /* Firefox */
+  -moz-transition: all 0.1s ease-in-out;
+  /* WebKit */
+  -webkit-transition: all 0.1s ease-in-out;
+  /* Opera */
+  -o-transition: all 0.1s ease-in-out;
+  /* Standard */
+  transition: all 0.1s ease-in-out;
+}
+
+.well .cover {
+  background: #000;
+}
+
+.well .cover img{
+  opacity: 0.8;
+        /* Firefox */
+  -moz-transition: all 0.2s ease-in-out;
+  /* WebKit */
+  -webkit-transition: all 0.2s ease-in-out;
+  /* Opera */
+  -o-transition: all 0.2s ease-in-out;
+  /* Standard */
+  transition: all 0.2s ease-in-out;
+}
+
+
+.well:hover .cover img {
+  opacity: 1
+}
+
+
+#projects .well:hover {
+  box-shadow: 0 2px 3px rgba(0,0,0,0.3);
+  cursor: pointer;
+    top:-2px;
+
+}
+
+.well .avatar {
+  width:32px;
+  height: 32px;
+
+}
+
+
+
+.modal .well {
+  margin: 0
+}
+.well-content {
+  padding:15px;
+}
+.well-content img {
+  border-radius: 50px;
+  width: 48px;
+  height: 48px;
+  margin-right: 5px;
+}
+
+.well-content img:last-child {
+  margin-right: 0px;
+}
+
+
+
+.well-content img:hover {
+  box-shadow: 0 0 5px #999;
+}
+
+.well h3 {
+  margin:0 0 10px 0;
+  font-size:             16pt;
+  font-weight:            700;
+  color:                 #000;
+  line-height:           20pt;
+  text-align:            left;
+}
+
+.well p > a:hover {
+  text-decoration: none;
+}
+
+
+.well p {
+  color:#777;
+  margin:0 0 10px 0; 
+}
+
+
+
+
+.well .row-fluid {
+  border-top:#EEE 1px solid;
+}
+
+/*[data-icon]::before {
+font-family:              'Entypo';
+color:                        #000;
+font-weight:        400 !important;
+content:           attr(data-icon);
+text-transform:               none;
+position:                 relative;
+top:                           3px;
+font-size:                    30px;
+line-height:                     0;
+}*/
+
+.divider {
+  border-top: 3px solid;
+  margin-bottom: 8px;
+}
+
+
+.divider.prototyping { border-color:#ff5f8c;}
+.divider.releasing { border-color:#77db45;}
+.divider.wireframing { border-color:#55c5ff;}
+.divider.researching { border-color:red;}
+.divider.brainstorming { border-color:#ff5a00;}
+
+.info {
+  padding-left: 10px;
+  margin-bottom: 16px;
+}
+
+.status {
+  display: block;
+}
+
+.tags {
+  display: block;
+}
+
+.tag {
+  display: inline-block;
+
+}
+
+.actions {
+  margin-top:5px;
+}
+
+
+@media (max-width: 480px) {
+
+}
+
+@media (max-width: 768px) {
+  header h1 small {
+    display: block;
+  }
+
+  header div.description {
+    padding-top: 9px;
+    padding-bottom: 4px;
+  }
+
+  .isotope .project {
+    position: static ! important;
+    -webkit-transform: translate(0px, 0px) ! important;
+       -moz-transform: translate(0px, 0px) ! important;
+            transform: translate(0px, 0px) ! important;
+  }
+}
+
+@media (max-width: 980px) {
+  header p.lead span {
+    display: block;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 768px) {
+
+}
+
+
+@media (min-width: 768px) and (max-width: 980px) {
+  .project.span4 {
+    width: 352px;
+  }
+}
+
+@media (min-width: 980px) {
+
+}
+
+@media (min-width: 1200px) {
+  .project.span4 {
+    width: 270px;
+  }
+}
+
+.signup-btn  {
+
+  background:#4bcf0a;
+  border:#4bcf0a 2px solid;
+  border-radius: 50px;
+  color: #fff !important;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.00);
+  box-shadow: none;
+  font-weight: bolder;
+      /* Firefox */
+  -moz-transition: all 0.2s ease-in-out;
+  /* WebKit */
+  -webkit-transition: all 0.2s ease-in-out;
+  /* Opera */
+  -o-transition: all 0.2s ease-in-out;
+  /* Standard */
+  transition: all 0.2s ease-in-out;
+
+
+
+
+
+
+  display: block;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 12px 30px 12px 0;
+    margin: 10px 0 25px;
+    cursor: pointer;
+    text-align: left;
+    margin: 20px 0;
+}
+
+.signup-btn i {
+      height: 24px;
+      width: 20px;
+      background-size: 24px;
+      display: inline-block;
+      vertical-align: text-top;
+      margin-right: 15px;
+      border-right: 1px solid rgba(0, 0, 0, 0.1);
+      padding-right: 30px;
+      box-shadow: 1px 0 0px rgba(255, 255, 255, 0.2); }
+
+.signup-btn:hover {
+
+  color: #ffffff;
+  box-shadow: 0 0 2px #CCC;
+  text-decoration: none;
+  background-position: 0 0 !important;
+}
+
+.signup-twitter {
+    background-color: #0ba8d6;
+    border-color: #0ba8d6;
+    background-image: -moz-linear-gradient(#35bfe7, #0ba8d6);
+    background-image: -o-linear-gradient(#35bfe7, #0ba8d6);
+    background-image: -ms-linear-gradient(#35bfe7, #0ba8d6);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #35bfe7), color-stop(1, #0ba8d6));
+    background-image: -webkit-linear-gradient(#35bfe7, #0ba8d6); }
+
+.signup-twitter:hover {
+    background-color: #0ba8d6;
+    border-color: #35bfe7;  
+}
+
+.signup-twitter i {
+      background: url('../images/icon-twitter.svg') 14px center no-repeat;
+      background-size: 30px auto; }
+
+.signup-facebook {
+    background-color: #4264b3;
+    background-image: -moz-linear-gradient(#679ace, #4264b3);
+    background-image: -o-linear-gradient(#679ace, #4264b3);
+    background-image: -ms-linear-gradient(#679ace, #4264b3);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #679ace), color-stop(1, #4264b3));
+    background-image: -webkit-linear-gradient(#679ace, #4264b3);
+    border-color: #679ace;
+    text-shadow: 0 1px 0 #2d449e; }
+
+.signup-facebook i {
+      background: url('../images/icon-facebook.svg') 14px center no-repeat;
+      background-size: 30px auto;
+}
+
+.signup-meetup {
+    background-color: #E11B36;
+    background-image: -moz-linear-gradient(#E11B36, #C61E2F);
+    background-image: -o-linear-gradient(#E11B36, #C61E2F);
+    background-image: -ms-linear-gradient(#E11B36, #C61E2F);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #E11B36), color-stop(1, #C61E2F));
+    background-image: -webkit-linear-gradient(#E11B36, #C61E2F);
+    border-color: #C61E2F;
+    text-shadow: 0 1px 0 #D12038; }
+
+.signup-meetup i {
+      background: url('../images/icon-meetup.png') 14px center no-repeat;
+      background-size: 30px auto;
+}
+
+.signup-github {
+    color: #4C4C4C !important;
+    background-color: #EAEAEA;
+    background-image: -moz-linear-gradient(#FAFAFA, #EAEAEA);
+    background-image: -o-linear-gradient(#FAFAFA, #EAEAEA);
+    background-image: -ms-linear-gradient(#FAFAFA, #EAEAEA);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FAFAFA), color-stop(1, #EAEAEA));
+    background-image: -webkit-linear-gradient(#FAFAFA, #EAEAEA);
+    border-color: #CACACA;
+    text-shadow: 0 1px 0 #CBCBCB; }
+
+.signup-github i {
+      background: url('../images/icon-github.svg') 14px center no-repeat;
+      background-size: 30px auto;
+}
+
+a.signup-github:hover {
+  background-color:#EAEAEA;
+  border:#CACACA 2px solid; 
+
+}
+
+#ghImportBtn {
+    margin-left: 60px !important;
+    margin-bottom: 15px !important;
+}
+
+#ghImportBtn.signup-btn  {
+width: 179px;
+border-width: 1px;
+border-radius: 20px !important;
+font-size: 12px !important;
+display: block;
+font-weight: bold;
+padding: 6px 20px 6px 0;
+margin: 10px 0 15px;
+cursor: pointer;
+text-align: center;
+}
+
+#ghImportBtn.signup-btn i {
+      height: 18px;
+      width: 20px;
+      background-size: 20px;
+      display: inline-block;
+      vertical-align: text-top;
+      margin-right: 15px;
+      border-right: 1px solid rgba(0, 0, 0, 0.1);
+      padding-right: 30px;
+      box-shadow: 1px 0 0px rgba(255, 255, 255, 0.2); }
+
+.btn-custom {
+  border-radius: 50px;
+  background:#04d27d;
+  color: #fff !important;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.00);
+  box-shadow: none;
+  font-weight: normal;
+  -moz-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  padding: 10px 20px;
+}
+.btn-custom:hover {
+    background:#0ee68d;
+}
+.btn-group>.btn+.btn {
+ margin-left: 0px;
+}
+
+.btn-large {
+  padding: 14px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+
+.btn-group>.btn:first-child {
+  -webkit-border-bottom-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  -webkit-border-top-left-radius: 50px;
+  border-top-left-radius: 50px;
+  -moz-border-radius-bottomleft: 50px;
+  -moz-border-radius-topleft: 50px;
+}
+
+.btn-group>.btn:last-child {
+-webkit-border-top-right-radius: 50px;
+border-top-right-radius: 50px;
+-webkit-border-bottom-right-radius: 50px;
+border-bottom-right-radius: 50px;
+-moz-border-radius-topright: 50px;
+-moz-border-radius-bottomright: 50px;
+}
+
+
+
+
+.btn-profile {
+  padding: 0;
+  border: none;
+  background:#E6E6E6;
+  color: #999 !important;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.00);
+  box-shadow: none;
+  font-weight: bolder;
+  margin-left: 5px;
+      /* Firefox */
+  -moz-transition: all 0.2s ease-in-out;
+  /* WebKit */
+  -webkit-transition: all 0.2s ease-in-out;
+  /* Opera */
+  -o-transition: all 0.2s ease-in-out;
+  /* Standard */
+  transition: all 0.2s ease-in-out;
+}
+
+
+.btn-profile img {
+  width: 50px;
+  height: 50px;
+}
+
+
+.btn-cancel {
+  background:#E6E6E6;
+  border: #E6E6E6 2px solid;
+  border-radius: 50px;
+  color: #999 !important;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.00);
+  box-shadow: none;
+  font-weight: bolder;
+  margin-left: 5px;
+      /* Firefox */
+  -moz-transition: all 0.2s ease-in-out;
+  /* WebKit */
+  -webkit-transition: all 0.2s ease-in-out;
+  /* Opera */
+  -o-transition: all 0.2s ease-in-out;
+  /* Standard */
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-cancel:hover {
+    background: #E6E6E6;
+    border: #999 2px solid;
+    color:#999!important;
+}
+
+.project .well {
+  border-top:10px solid #000;
+}
+
+.project.prototyping .well { border-top-color:#ff5f8c;}
+.project.building .well { border-top-color:#77db45;}
+.project.wireframing .well { border-top-color:#55c5ff;}
+.project.researching .well { border-top-color:red;}
+.project.brainstorming .well { border-top-color:#ff5a00;}
+
+
+h1,h2,h3,h4,h5,h6,p {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.activity {
+  padding: 6px;
+  display: inline-block;
+  border-right: 1px solid #EEE;
+  text-align: center;
+  margin:0!important;
+}
+
+.activity span {
+
+  opacity: 0.2;
+  /* Firefox */
+  -moz-transition: all 0.3s ease;
+  /* WebKit */
+  -webkit-transition: all 0.3s ease;
+  /* Opera */
+  -o-transition: all 0.3s ease;
+  /* Standard */
+  transition: all 0.3s ease;
+}
+
+.activity span:hover {
+  opacity: 0.5;
+}
+.edit, .remove, .contributor, .follower, .tweet-action {
+  border-left: 1px solid #EEE;
+  text-align: center;
+  font-weight: bold;
+}
+
+.edit a, .remove a, .contributor a, .follower a {
+  color:#999;
+  font-size: 12px
+}
+
+
+.formSearch {
+  text-align: center;
+}
+
+.formSearch input {
+  height: 30px !important;
+  border-radius: 50px;
+}
+
+
+.people {
+  font-weight: bold;
+  color: #d2d2d2;
+}
+
+.people a {
+  padding: 0px 0 1px 0px;
+}
+
+.people a:hover {
+  text-decoration: none;
+}
+
+.people a span {
+  margin-left: 3px;
+}
+
+.people.unfollow {
+  color: #E2B6B6;
+}
+
+.people.unfollow [data-icon]::before{
+  color: #FF0000;
+}
+
+.modal form {margin:0;}
+
+#page {
+  min-height: 600px;
+}
+
+#newProject {
+  font-family: 'Lato', sans-serif;
+  /*margin: -250px 0 0 -158px;*/
+}
+
+#newProject legend {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 60px;
+  margin: 0px 0px 0px 10px;
+  border: none;
+}
+
+.input-xlarge {
+  width: 380px;
+}
+
+.hashtag {
+  width: 352px;
+}
+
+.form-horizontal .controls {
+  margin-left: 60px;
+}
+
+.well-header {
+  padding: 15px;
+  background:#F8F8F8;
+}
+
+#fullProject.modal {
+  width:670px;
+  margin:-250px 0 0 -320px!important;
+  overflow-y:auto;
+  max-height:70%;
+  overflow: auto;
+}
+
+.well-sidebar {
+  display: inline-block;  width:150px;
+  padding: 15px;
+
+}
+
+.well-sidebar h6:first-child {
+  margin: 0 0 5px 0;
+}
+.well-sidebar h6 {
+  margin:10px 0 5px 0;
+  font-size:14px;
+  color:#999999;
+  font-weight: normal;
+
+}
+
+.well-sidebar p, .well-sidebar li, .well-sidebar strong{
+  font-weight: bold;
+  color:#000;
+}
+
+ .well-sidebar ul {
+  margin:0;
+  padding: 0;
+  list-style: none;
+ }
+
+.modal .well-content {
+  width:430px;
+display: inline-block;
+vertical-align: top;
+}
+
+#dragdrop {
+  width: 280px;
+  height: 100px;
+  border: dashed 2px #999;
+  border-radius: 5px;
+  text-align: center;
+}
+
+#dragdrop p {
+  font-weight: bold;
+  font-size: 16px;
+  vertical-align: middle;
+  margin-top: 40px;
+  color: silver;
+}
+
+#dragdrop input {
+  margin:25px auto 0 auto;
+  display: none;
+}
+
+#dragdrop.success {
+  background: #669900;
+}
+
+/*
+Click on project effect
+*/
+
+.zoomed {
+  visibility: hidden;
+}
+
+
+footer { 
+  padding: 18px 0 17px 0;
+  background: #000;
+  margin: 100px 0 0 0;
+}
+
+.hidden {
+  display: none;
+}
+
+header form {
+  margin:0;
+}
+
+header .btn-link {
+  color:#FFF;
+  font-weight: normal;
+  text-shadow:none;
+  opacity: 0.5
+}
+#searchInput {
+  border: 1px solid #000; width:100%;
+  padding:25px;  margin-top: 0px;
+  color:#000;
+  border: 0px;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  background-color: #ffffff;
+  border: 0px;
+  }
+
+input {
+  height: auto !important;
+}
+  
+  /*#searchInput:before {
+     content: "\22";
+  }*/
+
+
+/*
+#ghImportBtn {
+    color: #4C4C4C !important;
+    background-color: #EAEAEA;
+    background-image: -moz-linear-gradient(#FAFAFA, #EAEAEA);
+    background-image: -o-linear-gradient(#FAFAFA, #EAEAEA);
+    background-image: -ms-linear-gradient(#FAFAFA, #EAEAEA);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FAFAFA), color-stop(1, #EAEAEA));
+    background-image: -webkit-linear-gradient(#FAFAFA, #EAEAEA);
+    border-color: #CACACA;
+    text-shadow: 0 1px 0 #CBCBCB; }
+#ghImportBtn:hover {
+  background-color:#EAEAEA;
+  border:#CACACA 2px solid; 
+}
+
+#ghImportBtn:before {
+      background: url('../images/icon-github.svg') 14px center no-repeat;
+      background-size: 30px auto;
+}*/

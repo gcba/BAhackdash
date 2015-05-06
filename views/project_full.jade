@@ -1,0 +1,54 @@
+.project(data-contribs=project.contributors.length, data-name=project.title, data-date=("undefined" == typeof project.created_at) ? 0 : project.created_at, id="project-" + project.id, class=project.status)
+  
+  .well
+    .well-header
+      button(class="close", type="button", data-dismiss="modal", aria-hidde"true")&times;
+
+      h3
+        a(href="/p/" + project.id, target="_blank") #{project.title}
+      p #{project.description}
+      a(href=project.link) #{project.link}
+
+      .tweets
+        small Último Tweet:
+        p
+        a 
+    
+    .well-sidebar
+
+      h6 Creado
+      strong= moment(project.created_at).fromNow()
+
+      h6 Estado
+      strong= project.status
+
+      h6 Hashtag
+      strong.hashtag ##{project.hashtag}
+
+      h6 Tags
+      ul
+        each tag in project.tags
+          li= tag
+
+
+    .well-content
+     
+      h5 Manejado por
+      a(href="/users/" + project.leader.id)
+        img.tooltips(src=project.leader.picture, title=project.leader.name)
+
+      h5 Equipo 
+      each contributor in project.contributors
+        a(href="/users/" + contributor.id)
+          img.tooltips(src=contributor.picture, title=contributor.name)
+      
+      h5 #{project.followers.length} Likes
+      each follower in project.followers
+        a(href="/users/" + follower.id)
+          img.tooltips(src=follower.picture, title=follower.name)
+
+    if disqus_shortname
+      #disqus_thread.well-header
+      script(src="/js/disqus.js", disqus_shortname=disqus_shortname)
+    
+      

@@ -1,0 +1,55 @@
+.modal-header
+  a(class="close", data-dismiss="modal", aria-hidde"true")&times;
+  h3 Create project
+
+.modal-body
+  .row-fluid
+   .span12
+    a#ghImportBtn(class="btn btn-large signup-btn signup-github",href="#")
+      i
+      | Importar de Github
+
+    .control-group.hidden.form-horizontal
+      .controls
+        input(type="text", class="input-large", placeholder="repo user/name",name="repo")
+        button#searchGh.btn() Import
+
+  form.ajaxForm.form-horizontal(action="/api/projects/create", method="POST")
+     
+    .control-group
+      .controls
+        input(type="text", class="input-xlarge", placeholder="Título", name="title")
+
+    .control-group
+      .controls
+        textarea(class="input-xlarge", id="description", name="description", rows="4", maxlength="400", placeholder="Descripción")
+
+    .control-group
+      .controls.input-prepend
+        span.add-on #
+        input(type="text", class="input-xlarge hashtag", placeholder="Hashtag", name="hashtag")
+
+    .control-group
+      .controls
+        #dragdrop 
+          p Drag Photo Here
+          input(type="file", name="cover_fall", id="cover_fall")        
+
+    .control-group
+      .controls
+        input(class="input-xlarge", type="text", name="link", id="link", placeholder="Link")
+
+    .control-group
+      .controls
+        input(class="input-xlarge", type="text", name="tags", id="tags", placeholder="Tags")
+    
+    .control-group
+      .controls
+        select(class="input-xlarge", name="status", id="status")
+          each status in statuses
+            option(value=status)= status
+    
+    .modal-footer
+
+      a.cancel.btn.btn-cancel(data-dismiss="modal") Cancelar
+      input.btn.primary.btn-custom(type="submit", value="Crear proyecto")

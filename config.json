@@ -1,0 +1,11 @@
+{
+  "db": {
+    "name": "proyectos",
+    "host": "localhost",
+    "url": "mongodb://admin:ehW6BKxQAaYz@127.10.143.2:27017/proyectos"
+  },  
+  "host": "localhost",
+  "port": "8080",
+  "session": "sessions",
+  "disqus_shortname": "bahackatonverde"
+}
