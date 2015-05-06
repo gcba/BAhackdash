@@ -1,0 +1,8 @@
+{
+    "twitter": {
+        "consumerKey" :   ""
+      , "consumerSecret" : ""
+      , "callbackURL":  "http://localhost/auth/twitter/callback"
+    } 
+
+}
